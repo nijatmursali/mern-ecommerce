@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import Banner from "./Components/Banner";
-import Featured from "./Components/Featured";
+import Content from "./Components/Content";
 import NewArrivals from "./Components/NewArrivals";
 
 function App() {
@@ -10,8 +10,8 @@ function App() {
     <div>
       <Header />
       <Banner />
-      <Featured />
       <NewArrivals />
+      <Content />
       <Footer />
     </div>
   );
