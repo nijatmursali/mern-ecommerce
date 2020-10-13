@@ -1,19 +1,20 @@
 import React from "react";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
-import Banner from "./Components/Banner";
-import Content from "./Components/Content";
-import NewArrivals from "./Components/NewArrivals";
+import HomeScreen from "./Screens/HomeScreen";
+import ProductScreen from "./Screens/ProductScreen";
+
+//import routers
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div>
+    <Router>
       <Header />
-      <Banner />
-      <NewArrivals />
-      <Content />
+      <Route path="/" component={HomeScreen} exact />
+      <Route path="/product/:id" component={ProductScreen} />
       <Footer />
-    </div>
+    </Router>
   );
 }
 
