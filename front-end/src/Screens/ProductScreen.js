@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import products from "../dummy-data/products";
+import axios from "axios";
 
 const ProductScreen = ({ match }) => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const { data } = await axios.get("/api/products");
+
+      setProducts(data);
+    };
+    fetchProducts();
+  }, []);
+
   const product = products.find((p) => p._id === match.params.id);
   return (
     <div>
