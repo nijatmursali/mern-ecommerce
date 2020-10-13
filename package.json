@@ -1,0 +1,25 @@
+{
+  "name": "mern-ecommerce",
+  "proxy": "http://127.0.0.1:5000",
+  "version": "1.0.0",
+  "description": "Full Stack MERN",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon back-end/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nijatmursali/mern-ecommerce.git"
+  },
+  "author": "Nijat Mursali",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nijatmursali/mern-ecommerce/issues"
+  },
+  "homepage": "https://github.com/nijatmursali/mern-ecommerce#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.5"
+  }
+}

@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../App.css";
-import products from "../dummy-data/products";
 import Product from "./Product";
+import axios from "axios";
 
 const Content = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const { data } = await axios.get("/api/products");
+
+      setProducts(data);
+    };
+    fetchProducts();
+  }, []);
+
   return (
     <>
       <section className="w3l-ecommerce-main">
