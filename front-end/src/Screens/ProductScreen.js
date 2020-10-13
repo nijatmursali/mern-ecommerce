@@ -3,18 +3,19 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 const ProductScreen = ({ match }) => {
-  const [products, setProducts] = useState([]);
+  const [product, setProduct] = useState([]);
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const { data } = await axios.get("/api/products");
+      const { data } = await axios.get(`/api/products/${match.params.id}`);
+      console.log(data);
 
-      setProducts(data);
+      setProduct(data);
     };
     fetchProducts();
   }, []);
 
-  const product = products.find((p) => p._id === match.params.id);
+  //const product = products.find((p) => p._id === match.params.id);
   return (
     <div>
       <div className="product_image_area section_padding">
