@@ -25,7 +25,7 @@ const ProductScreen = ({ match }) => {
               <div className="product_slider_img">
                 <div id="vertical">
                   <div data-thumb={product.image}>
-                    <img src={product.image} />
+                    <img src={product.image} alt={product.title} />
                   </div>
                 </div>
               </div>
