@@ -3,3 +3,4 @@ node_modules
 back-end/.env
 back-end/config/db.js
 .env
+back-end/config/db.js
